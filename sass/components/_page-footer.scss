@@ -1,0 +1,126 @@
+@use "../utils/variables" as v;
+@use "../utils/extends";
+
+.footer {
+  background-color: v.$dark-gray;
+  padding: 55px 0;
+  align-items: center;
+  &__logo {
+    padding: 0 0 10px;
+    a {
+      @extend logo;
+    }
+  }
+  h4 {
+    @extend titles-h4;
+  }
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__address {
+  &--item {
+    color: v.$white-color;
+    font-size: 14px;
+    font-style: unset;
+    line-height: 1.7;
+  }
+  &--contact-info {
+    font-style: unset;
+    line-height: 1.7;
+    a {
+      color: v.$gray-text-color;
+      font-size: 14px;
+      text-decoration: none;
+    }
+  }
+}
+.footer__social {
+  margin-left: 80px;
+
+  
+  &--icon {
+    list-style: none;
+    display: flex;
+    margin: auto;
+    font-size: 20px;
+    transition: 500ms ease;
+    padding: 20px 0;
+  }
+}
+.footer__social {
+  li {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.3;
+    width: 44px;
+    height: 44px;
+    margin: auto;
+
+    &:hover {
+      background-color: v.$brand-color;
+    }
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    a {
+      color: v.$white-color;
+      display: block;
+      text-decoration: none;
+      &:focus {
+        background: v.$brand-color;
+        color: v.$white-color;
+        border-radius: 50%;
+        text-align: center;
+        width: 44px;
+        height: 44px;
+      }
+    }
+  }
+}
+.footer__email {
+  &--news {
+    fill: v.$white-color;
+    display: block;
+    margin-left: 20px;
+  }
+  &--btn-news{
+    background-color: v.$brand-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    color: v.$white-color;
+    border-radius: 4px;
+    border-color: transparent;
+    font-size: 1rem;
+    font-weight: v.$ft-bold;
+    letter-spacing: 0.06em;
+    margin-left: 10px;
+    padding: 9px 50px;
+    cursor: pointer;
+    transition: 0.7s;
+    display: flex;
+    align-items: center;
+
+    & svg{
+    margin-left: 10px;
+    fill: v.$white-color;
+
+    }
+  }
+}
+
+.footer__email--news-display{
+    display: flex;
+    padding-top: 20px;
+
+    input {
+      height: 50px;
+      width: 358px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      padding-left: 20px;
+      background-color: v.$dark-gray;
+      color: v.$light-gray;
+    }
+}

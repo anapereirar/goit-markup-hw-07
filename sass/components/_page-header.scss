@@ -1,0 +1,86 @@
+@use "../utils/variables" as v;
+@use "../utils/extends";
+
+
+.header {
+  border: 1px solid #ececec;
+  padding: 24px 0;
+  display: flex;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.header__logo {
+    span a {
+       @extend logo;
+    }
+  }
+
+.header__menu {
+    display: flex;
+    list-style: none;
+
+    &--link {
+      color: v.$black-icon;
+      margin-right: 60px;
+      text-decoration: none;
+      font-weight: v.$ft-semibold;
+      letter-spacing: 0.02rem;
+      position: relative;
+
+      &:hover,
+      &:focus {
+        color: v.$brand-color;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 4px;
+        display: block;
+        background: v.$brand-color;
+        border-radius: 2px;
+        transition: 0.4s ease;
+        top: 47px;
+        right: 0;
+      }
+      &:hover::after {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+
+.header__contact-info {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+
+    &--link {
+      display: flex;
+      align-items: center;
+      color: v.$gray-text-color;
+      font-weight: v.$ft-semibold;
+      text-decoration: none;
+      letter-spacing: 0.02rem;
+      margin-left: 60px;
+
+    }
+      &--link:hover, &--icon:hover,
+      &--link:focus, &--icon:focus,
+      {
+        fill:v.$brand-color;
+        color:v.$brand-color;
+    }
+
+  &--icon{
+    margin-right: 10px;
+    fill: v.$gray-text-color;
+  }
+}
+  

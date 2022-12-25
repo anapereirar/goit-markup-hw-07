@@ -1,0 +1,36 @@
+@use "../utils/variables" as v;
+@use "../utils/extends";
+
+.clients {
+  h2 {
+    @extend titles-h2;
+    padding-bottom: 50px;
+  }
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-bottom: 70px;
+  }
+}
+.clients__list{
+    &--client{
+        border: 1px solid v.$lighter-gray;
+        border-radius: 4px;
+        width: 170px;
+        height: 81px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            @extend hover;
+        }
+    }
+
+    &--icon{
+        fill: v.$lighter-gray;
+        &:hover, &:focus{
+            @extend hover;
+        }
+    }
+}

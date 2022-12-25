@@ -1,0 +1,65 @@
+@use "../utils/variables" as v;
+@use "../utils/extends";
+
+.description__values {
+    @extend images-row;
+  li {
+    text-decoration: none;
+    width: 270px;
+    h4 {
+      @extend black-titles-h4;
+      font-weight: v.$ft-bold;
+      line-height: 4;
+    }
+    p{
+      color: v.$gray-text-color;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  }
+}
+
+.description--icon {
+  align-items: center;
+  display: flex;
+  border-radius: 4px;
+  background-color: v.$light-gray;
+  justify-content: center;
+  height: 120px;
+  width: 270px;
+}
+
+.description {
+  &__sub-section {
+  
+    h2 {
+      @extend titles-h2;
+      margin-top: 60px;
+    }
+    &-images {
+      @extend images-row;
+      padding: 50px 0 0;
+      text-transform: uppercase;
+      color: v.$white-color;
+      font-size: 14px;
+      font-weight: v.$ft-bold;
+      letter-spacing: 0.03rem;
+      
+      li{
+        position: relative;
+      }
+    }
+  }
+}
+.description{
+    &--text{
+        position: absolute;
+        bottom: 1%;
+        background-color: rgba(47, 48, 58, 0.8);
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
