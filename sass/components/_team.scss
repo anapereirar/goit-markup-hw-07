@@ -5,11 +5,11 @@
 .team{
     background-color: v.$light-gray;
     h2{
-        @extend titles-h2;
+        @extend .titles-h2;
         padding-bottom: 50px;
     }
     &__cards{
-    @extend images-row;
+    @extend .images-row;
     }
 }
 .team--card{
@@ -28,7 +28,7 @@
     }
 }
 .team--social{
-    @extend images-row;
+    @extend .images-row;
     font-size: 20px;
     justify-content: space-around;
     margin: 20px auto;

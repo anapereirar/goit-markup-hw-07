@@ -2,12 +2,12 @@
 @use "../utils/extends";
 
 .description__values {
-    @extend images-row;
+    @extend .images-row;
   li {
     text-decoration: none;
     width: 270px;
     h4 {
-      @extend black-titles-h4;
+      @extend .black-titles-h4;
       font-weight: v.$ft-bold;
       line-height: 4;
     }
@@ -33,11 +33,11 @@
   &__sub-section {
   
     h2 {
-      @extend titles-h2;
+      @extend .titles-h2;
       margin-top: 60px;
     }
     &-images {
-      @extend images-row;
+      @extend .images-row;
       padding: 50px 0 0;
       text-transform: uppercase;
       color: v.$white-color;

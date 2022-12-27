@@ -17,7 +17,7 @@
 
 .header__logo {
     span a {
-       @extend logo;
+       @extend .logo;
     }
   }
 

@@ -8,11 +8,11 @@
   &__logo {
     padding: 0 0 10px;
     a {
-      @extend logo;
+      @extend .logo;
     }
   }
   h4 {
-    @extend titles-h4;
+    @extend .titles-h4;
   }
 }
 .footer__container {
